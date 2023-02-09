@@ -20,9 +20,15 @@ HTML5, CSS3, JavaScript
 1. Clone this repo (or download as zip from GitHub)
 2. Open it open and go to the directory its located
 3. Open `index.html` to the browser of your choice
+  * Bookmark the page
 
-Place audio files in the `audio` folder. 
+# How to use
 
+To make a custom playlist: 
+
+1. Place audio files in the `audio` folder.
+2. Bonus: add their corresponding images with filenames named after their respective audio filename. For example, for `elevate.mp3` in the `audio` folder add `elevate.png` in the `img` folder. PNG, JPG, and GIF image formats are supported.
+3. Open up `index.html`, and enjoy!
 
 # Specifications
 

@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="stylesheet" href="style.css">
-  <title>Audio Player</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Audio Player</title>
+  </head>
+  <body>
+    <h1>Audio Player</h1>
 
-  
-  <div class="audio-container" id="audio-container">
-    <div class="audio-info"></div>
-      <h4 id="title"></h4>
-      <div class="progress-container" id="progress-container">
-        <div class="progress" id="progress"></div>
-      </class>
-  </div>
-  
-  <audio src="audio/elevate.mp3" id="audio"></audio>
+    <div class="audio-container play" id="audio-container">
+      <div class="audio-info">
+        <h4 id="title">elevate</h4>
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
 
-  <div class="img-container">
-    <img src="img/elevate.webp" alt="audio-cover" id="cover">
-  </div>
-  <div class="navigation">
-    <button id="prev" class="action-btn">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-        <path d="M7.712 4.819A1.5 1.5 0 0110 6.095v2.973c.104-.131.234-.248.389-.344l6.323-3.905A1.5 1.5 0 0119 6.095v7.81a1.5 1.5 0 01-2.288 1.277l-6.323-3.905a1.505 1.505 0 01-.389-.344v2.973a1.5 1.5 0 01-2.288 1.276l-6.323-3.905a1.5 1.5 0 010-2.553L7.712 4.82z" />
-      </svg>
-    </button>
-    <button id="play" class="action-btn action-btn-big">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-        <path d="M12.75 4a.75.75 0 00-.75.75v10.5c0 .414.336.75.75.75h.5a.75.75 0 00.75-.75V4.75a.75.75 0 00-.75-.75h-.5zM17.75 4a.75.75 0 00-.75.75v10.5c0 .414.336.75.75.75h.5a.75.75 0 00.75-.75V4.75a.75.75 0 00-.75-.75h-.5zM3.288 4.819A1.5 1.5 0 001 6.095v7.81a1.5 1.5 0 002.288 1.277l6.323-3.906a1.5 1.5 0 000-2.552L3.288 4.819z" />
-      </svg>
-    </button>
-    <button id="next" class="action-btn">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-        <path d="M3.288 4.819A1.5 1.5 0 001 6.095v7.81a1.5 1.5 0 002.288 1.277l6.323-3.905c.155-.096.285-.213.389-.344v2.973a1.5 1.5 0 002.288 1.276l6.323-3.905a1.5 1.5 0 000-2.553L12.288 4.82A1.5 1.5 0 0010 6.095v2.973a1.506 1.506 0 00-.389-.344L3.288 4.82z" />
-      </svg>
-    </button>
-  </div>
-  <script src="script.js"></script>
-</body>
+      <audio src="audio/elevate.mp3" id="audio"></audio>
+
+      <div class="img-container">
+        <img src="img/elevate.webp" alt="audio-cover" id="cover" />
+      </div>
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

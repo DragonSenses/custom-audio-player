@@ -41,6 +41,7 @@ To make a custom playlist:
   - [ ] include spinning image 
 
 Soon to add:
+-[ ] Default image to play for audio files with no cover image
 -[ ] Randomize next
 -[ ] Looper
 
@@ -48,3 +49,5 @@ Soon to add:
 # Attribution
 
 Sample stock music files are made by Benjamin Tissot, found at [bensound](https://www.bensound.com/free-music-for-videos). 
+
+Bensound.com/royalty-free-music

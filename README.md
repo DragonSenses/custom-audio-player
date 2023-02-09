@@ -37,3 +37,8 @@ Place audio files in the `audio` folder.
 Soon to add:
 -[ ] Randomize next
 -[ ] Looper
+
+
+# Attribution
+
+Sample stock music files are made by Benjamin Tissot, found at [bensound](https://www.bensound.com/free-music-for-videos). 

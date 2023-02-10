@@ -15,7 +15,10 @@ const files = ['elevate', 'evolution', 'littleidea'];
 // Keep track of file
 let fileIndex = 0;
 
-// Update file details
+/**
+ * Update the file details
+ * @param {string} file name of the audio file to update details of
+ */
 function loadFile(file){
   audio.src = `audio/${file}.mp3`;
   cover.src = `img/${file}.jpg`;
@@ -25,7 +28,9 @@ function loadFile(file){
 // Initially load file details into DOM
 loadFile(files[fileIndex]);
 
-// Play audio file
+/**
+ * Play audio file
+ */
 function playFile(){
   audioContainer.classList.add('play');
   playBtn.querySelector('i.fas').classList.remove('fa-play');
@@ -34,7 +39,9 @@ function playFile(){
   audio.play();
 }
 
-// Pause audio file
+/**
+ * Pauses audio file
+ */
 function pauseFile(){
   audioContainer.classList.remove('play');
   playBtn.querySelector('i.fas').classList.add('fa-play');
@@ -75,14 +82,67 @@ function nextFile(){
   playFile();
 }
 
+/**
+ * Update the progress bar
+ * @param {*} e the event
+ */
+function updateProgress(e) {
+  // Destructuring, extract variables from event source element
+  const { duration, currentTime } = e.srcElement;
+  const progressPercent = (currentTime / duration) * 100;
+  progress.style.width = `${progressPercent}%`;
+}
+
 /* Event Listeners */
 playBtn.addEventListener('click', () => {
   (audioContainer.classList.contains('play')) 
     ? pauseFile() : playFile();
 });
 
+/**
+ * Update the progress bar
+ * @param {Event} e 
+ */
+function updateProgress(e) {
+  const { duration, currentTime } = e.target;
+  const progressPercent = (currentTime / duration) * 100;
+  progress.style.width = `${progressPercent}%`;
+}
+
+/**
+ * Sets the current play time of the audio file to correspond to the 
+ * progress bar's width that the user has specified.
+ * @param {Event} e progress bar event handler
+ */
+function setProgress(e){
+  const width = this.clientWidth;
+  const clickX = e.offsetX;
+  const duration = audio.duration;
+
+  audio.currentTime = (clickX / width) * duration;
+}
+
 // previous and next audio files
 prevBtn.addEventListener('click', prevFile);
 nextBtn.addEventListener('click', nextFile);
+
 // audio ends
 audio.addEventListener('ended', nextFile);
+
+// Time/audio update
+audio.addEventListener('timeupdate', updateProgress);
+
+// Click on progress bar to set the time
+progressContainer.addEventListener('click', setProgress);
+
+/**
+ * Support for using 'Space Bar' to play and pause audio file.
+ * Added event listener to the document body instead.
+ */
+document.body.addEventListener('keydown', function(event){
+  if(event.code == 'Space'){
+    (audioContainer.classList.contains('play')) 
+      ? pauseFile() : playFile();
+  }
+});
+

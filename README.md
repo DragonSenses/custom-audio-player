@@ -27,26 +27,38 @@ HTML5, CSS3, JavaScript
 To make a custom playlist: 
 
 1. Place audio files in the `audio` folder.
-2. Bonus: add their corresponding images with filenames named after their respective audio filename. For example, for `elevate.mp3` in the `audio` folder add `elevate.jpg` in the `img` folder. 
-3. Open up `index.html`, and enjoy!
+2. Add their corresponding images with filenames named after their respective audio filename. 
+  * For example, for `elevate.mp3` in the `audio` folder add `elevate.jpg` in the `img` folder. 
+3. After adding all the necessary files to the folders, put their names in `script.js` in the files array.
+
+```js
+// audio files
+const files = ['elevate', 'evolution', 'littleidea'];
+```
+
+4. Open up `index.html`, and enjoy!
 
 * As of now, only supports `.mp3` and `.jpg` file extensions.
 
 # Specifications
 
-- [x] Play/Pause functionality
-- [x] Next/Prev audio 
-- [ ] Progress Bar
-- [ ] Display time in mins and seconds
+- [x] Play & Pause functionality
+- [x] Play & Pause with Spacebar
+- [x] Next & Previous audio file functionality 
+- [x] Progress Bar
+- [x] Interactive Progress Bar where user can set current time of audio file
 - [x] Display customized audio player, styled with CSS
-  - [x] song detail popup
-  - [x] include spinning image 
+- [x] Spinning cover image animation
+- [x] Audio file details pop-up 
+- [x] Details: Name & Progress Bar
 
-Soon to add:
--[ ] Default image to play for audio files with no cover image
--[ ] Support file extensions `.flac` and image file extensions: `.png`, , `.gif`, `.webp`
--[ ] Randomize next
--[ ] Looper
+Planning to add:
+- [ ] Display time in mins and seconds
+- [ ] Make custom playlists easier without changing the javascript code and just putting files in their respective folders
+- [ ] Default image to play for audio files with no cover image
+- [ ] Support file extensions `.flac` and image file extensions: `.png`, , `.gif`, `.webp`
+- [ ] Randomize next
+- [ ] Looper
 
 # Attribution
 
